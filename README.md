@@ -42,92 +42,97 @@ FITNUTRI est une application Angular moderne dédiée à l'évaluation nutrition
 
 ## 📦 Installation et Démarrage
 
-### 📱 Téléchargement APK (Android)
+### ⚠️ **STATUT ACTUEL DE L'APPLICATION**
 
-**🚀 Téléchargez directement l'application mobile :**
+**🚨 IMPORTANT : Aucun APK ou fichier de téléchargement n'est actuellement disponible.**
 
-[![Télécharger APK](https://img.shields.io/badge/Télécharger-APK%20Android-success?style=for-the-badge&logo=android)](https://github.com/nathomas34/fitnutri/releases/latest/download/fitnutri-release.apk)
+L'application FITNUTRI est actuellement en **développement local uniquement**. Voici les options réelles disponibles :
 
-**📋 Instructions d'installation :**
-1. Téléchargez le fichier APK ci-dessus
-2. Sur votre téléphone Android, allez dans **Paramètres > Sécurité**
-3. Activez **Sources inconnues** ou **Installer des applications inconnues**
-4. Ouvrez le fichier APK téléchargé
-5. Suivez les instructions d'installation
-6. Lancez FITNUTRI depuis votre écran d'accueil !
+### 🌐 **Option 1 : Utilisation Web Locale**
 
-**⚠️ Note de sécurité :** Cette APK est compilée directement depuis le code source open-source. Vous pouvez vérifier le code et compiler votre propre version si vous préférez.
+**Pour utiliser l'application maintenant :**
 
-**📊 Informations APK :**
-- **Version :** 1.0.0
-- **Taille :** ~15 MB
-- **Android minimum :** 7.0 (API 24)
-- **Permissions :** Caméra, Stockage, Vibration
-- **Architecture :** Universal (ARM64, ARM, x86)
+1. **Clonez le projet** :
+   ```bash
+   git clone <repository-url>
+   cd fitnutri
+   ```
 
-### 📱 Installation iOS (iPhone/iPad)
+2. **Installez les dépendances** :
+   ```bash
+   npm install
+   ```
 
-**🍎 Options pour les utilisateurs iOS :**
+3. **Lancez l'application** :
+   ```bash
+   npm start
+   ```
 
-#### Option 1: TestFlight (Recommandée)
-[![Rejoindre TestFlight](https://img.shields.io/badge/Rejoindre-TestFlight%20Beta-blue?style=for-the-badge&logo=apple)](https://testflight.apple.com/join/FITNUTRI-BETA)
+4. **Ouvrez dans votre navigateur** : `http://localhost:4200`
 
-**📋 Instructions TestFlight :**
-1. Installez **TestFlight** depuis l'App Store (gratuit)
-2. Cliquez sur le lien TestFlight ci-dessus
-3. Acceptez l'invitation à la bêta
-4. Installez FITNUTRI depuis TestFlight
-5. L'application se mettra à jour automatiquement
+### 📱 **Option 2 : Installation PWA (Après Déploiement)**
 
-#### Option 2: PWA (Progressive Web App)
-[![Installer PWA](https://img.shields.io/badge/Installer-PWA%20Safari-success?style=for-the-badge&logo=safari)](https://fitnutri.app)
+**Une fois l'app déployée en ligne, vous pourrez :**
 
-**📋 Instructions PWA :**
-1. Ouvrez **Safari** sur votre iPhone/iPad
-2. Allez sur [fitnutri.app](https://fitnutri.app)
-3. Appuyez sur le bouton **Partager** 📤
-4. Sélectionnez **"Sur l'écran d'accueil"**
-5. Confirmez l'ajout
-6. L'icône FITNUTRI apparaîtra sur votre écran d'accueil
+#### Sur Android (Chrome)
+1. Ouvrir l'app web dans Chrome
+2. Menu ⋮ → "Ajouter à l'écran d'accueil"
+3. L'app s'installera comme une app native
 
-#### Option 3: Sideloading (Utilisateurs Avancés)
-[![Télécharger IPA](https://img.shields.io/badge/Télécharger-IPA%20iOS-lightgrey?style=for-the-badge&logo=apple)](https://github.com/nathomas34/fitnutri/releases/latest/download/fitnutri-ios.ipa)
+#### Sur iOS (Safari)
+1. Ouvrir l'app web dans Safari
+2. Bouton Partager 📤 → "Sur l'écran d'accueil"
+3. L'app fonctionnera comme une app native
 
-**⚠️ Prérequis :** Compte développeur Apple ou jailbreak
-**📋 Instructions :**
-1. Téléchargez le fichier IPA ci-dessus
-2. Utilisez **AltStore**, **Sideloadly** ou **Xcode**
-3. Signez l'application avec votre certificat
-4. Installez sur votre appareil
+### 🚀 **Option 3 : Créer un Vrai APK (Pour Développeurs)**
 
-**📊 Informations iOS :**
-- **Version :** 1.0.0
-- **Taille :** ~18 MB
-- **iOS minimum :** 12.0
-- **Compatibilité :** iPhone 6s+, iPad Air 2+
-- **Fonctionnalités natives :** Caméra, Partage, Vibrations
+**Si vous voulez créer un APK Android :**
 
-### 🌐 Version Web (Tous Appareils)
+1. **Installer Capacitor** :
+   ```bash
+   npm install @capacitor/core @capacitor/cli @capacitor/android
+   ```
 
-**🚀 Accès universel sans installation :**
+2. **Ajouter la plateforme Android** :
+   ```bash
+   npx cap add android
+   ```
 
-[![Ouvrir Web App](https://img.shields.io/badge/Ouvrir-Application%20Web-orange?style=for-the-badge&logo=web)](https://fitnutri.app)
+3. **Build et sync** :
+   ```bash
+   npm run build
+   npx cap sync android
+   ```
 
-**✨ Avantages de la version web :**
-- ✅ **Aucune installation** requise
-- ✅ **Fonctionne sur tous les appareils** (Android, iOS, Windows, Mac, Linux)
-- ✅ **Mises à jour automatiques**
-- ✅ **Même fonctionnalités** que les apps natives
-- ✅ **Responsive design** adaptatif
-- ✅ **Mode hors-ligne** disponible
+4. **Ouvrir dans Android Studio** :
+   ```bash
+   npx cap open android
+   ```
 
-**📱 Navigateurs supportés :**
-- Safari (iOS/macOS)
-- Chrome (Android/Desktop)
-- Firefox (Desktop/Mobile)
-- Edge (Windows/Mobile)
+5. **Générer l'APK** depuis Android Studio
 
----
+### 🌍 **Option 4 : Déploiement Web Public**
+
+**Pour rendre l'app accessible à tous :**
+
+#### Netlify (Gratuit)
+```bash
+npm run build:prod
+# Glisser-déposer le dossier dist/demo sur netlify.com
+```
+
+#### Vercel (Gratuit)
+```bash
+npm install -g vercel
+vercel --prod
+```
+
+#### GitHub Pages (Gratuit)
+```bash
+# Push sur GitHub, activer Pages dans les paramètres
+```
+
+### 🔧 Développement Local
 
 ### Prérequis
 - Node.js (version 18+)
@@ -147,7 +152,7 @@ npm install
 npm start
 ```
 
-L'application sera accessible sur `http://localhost:4200`
+L'application sera accessible sur `http://localhost:4200` et se rechargera automatiquement lors des modifications.
 
 ### Build de Production
 ```bash
@@ -156,6 +161,27 @@ npm run build
 
 # Les fichiers seront générés dans le dossier dist/
 ```
+
+### 🚀 Déploiement
+
+**Pour déployer votre propre version :**
+
+#### Netlify (Recommandé)
+1. Forkez ce repository
+2. Connectez votre compte GitHub à Netlify
+3. Sélectionnez le repository forké
+4. Configuration automatique détectée
+5. Déployez en un clic !
+
+#### Vercel
+1. Installez Vercel CLI : `npm i -g vercel`
+2. Exécutez : `vercel --prod`
+3. Suivez les instructions
+
+#### GitHub Pages
+1. Activez GitHub Pages dans les paramètres du repository
+2. Configurez la source sur `gh-pages` branch
+3. L'application sera disponible sur `https://username.github.io/fitnutri`
 
 ## 🐳 Docker
 
