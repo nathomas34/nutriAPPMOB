@@ -11,7 +11,11 @@ const config: CapacitorConfig = {
     SplashScreen: {
       launchShowDuration: 2000,
       backgroundColor: "#0A0A0A",
-      showSpinner: false
+      showSpinner: false,
+      androidSplashResourceName: "splash",
+      androidScaleType: "CENTER_CROP",
+      splashFullScreen: true,
+      splashImmersive: true
     },
     StatusBar: {
       style: 'dark',
@@ -19,6 +23,18 @@ const config: CapacitorConfig = {
     },
     Camera: {
       permissions: ['camera', 'photos']
+    },
+    App: {
+      launchUrl: 'com.fitnutri.app'
+    }
+  },
+  android: {
+    buildOptions: {
+      keystorePath: undefined,
+      keystorePassword: undefined,
+      keystoreAlias: undefined,
+      keystoreAliasPassword: undefined,
+      releaseType: 'APK'
     }
   }
 };

@@ -42,11 +42,32 @@ FITNUTRI est une application Angular moderne dédiée à l'évaluation nutrition
 
 ## 📦 Installation et Démarrage
 
-### ⚠️ **STATUT ACTUEL DE L'APPLICATION**
+### 📱 **TÉLÉCHARGEMENT APK ANDROID**
 
-**🚨 IMPORTANT : Aucun APK ou fichier de téléchargement n'est actuellement disponible.**
+**🎉 APK Android maintenant disponible !**
 
-L'application FITNUTRI est actuellement en **développement local uniquement**. Voici les options réelles disponibles :
+#### **Téléchargement Direct**
+1. **Compiler l'APK** (voir instructions ci-dessous)
+2. **Installer** sur votre téléphone Android
+3. **Profiter** de l'app native complète !
+
+#### **Instructions de Compilation**
+```bash
+# 1. Installer les dépendances
+npm install
+
+# 2. Configurer Android (première fois seulement)
+npm run android:setup
+
+# 3. Compiler et ouvrir dans Android Studio
+npm run android:build
+
+# 4. Dans Android Studio : Build → Build APK(s)
+# L'APK sera dans : android/app/build/outputs/apk/debug/
+```
+
+**📋 Prérequis :** Java JDK, Android Studio
+**📖 Guide détaillé :** Voir `android-setup.md`
 
 ### 🌐 **Option 1 : Utilisation Web Locale**
 
