@@ -1,0 +1,7 @@
+{
+  "name": "fitnutri-mobile",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

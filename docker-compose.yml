@@ -1,0 +1,31 @@
+version: '3.8'
+
+services:
+  fitnutri:
+    build: .
+    container_name: fitnutri-app
+    ports:
+      - "8080:80"
+    restart: unless-stopped
+    environment:
+      - NODE_ENV=production
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.fitnutri.rule=Host(`fitnutri.localhost`)"
+      - "traefik.http.services.fitnutri.loadbalancer.server.port=80"
+
+  # Service optionnel pour le développement avec hot reload
+  fitnutri-dev:
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    container_name: fitnutri-dev
+    ports:
+      - "4200:4200"
+    volumes:
+      - .:/app
+      - /app/node_modules
+    environment:
+      - NODE_ENV=development
+    profiles:
+      - dev
